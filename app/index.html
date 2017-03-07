@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>B9Lab Ethereum blockchain Project</title>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+<link href="./app.css" rel='stylesheet' type='text/css'>
+<link href="./calendar.css" rel='stylesheet' type='text/css'>
+<script src="./app.js"></script>
+<script src="./moment.js"></script>
+<script src="./calendar.js"></script>
+</head>
+<body>
+<h2>Welcome To Crowdfunding APP Using Crypto Currency</h2> 
+<h3>Create your Project</h3>
+<table>
+<tr> <td>
+<label for="proj_name">Project name</label>
+</td>
+<td>
+<input type="text" name="project_name" id="project_name"><br>
+</td></tr> 
+<br> 
+<br>
+    <tr> <td>
+ <label for="proj_desc">Project Decription</label> </td> <td>
+ <input type="text" name="project_desc" id="project_desc"><br>
+</td></tr> 
+ <br> 
+ <br>
+    <tr> <td>
+ <label for="proj_fund">Project Budget in Ether</label> </td> <td>
+
+ <input type="number" min="0" name="project_budget" id="project_budget"><br>
+</td></tr> 
+ <br>
+    <br>
+   <tr> <td>
+ <label for="proj_enddate">Project End Date</label></td> <td> 
+ <input type="date" name="deadline" id ="deadline"><br>
+	</td></tr> 
+ <br>
+ <br>
+<tr> <td>
+<input type="submit" onclick="createProject()" name="submit" value="Create Project" /> </td></tr> 
+</table>
+<br>
+<br>
+<h3>List of available Projects</h3>
+<br>
+<input type="submit" onclick="loadProjects()" name="getprojects" value="Get Projects" />
+<br>
+<div id="mytable">
+
+</div>
+  <h3>Contribute to the Project</h3>
+<br>
+<table>
+<tr>
+<td>
+ <label for="proj_contribute">Enter the project addres</label>
+</td>
+<td>
+ <input type="text" name="project_address" id="project_address">
+</td></tr>
+<tr>
+<td>
+ <label for="proj_funding">Contribution amount in Ether</label> 
+</td>
+<td>
+ <input type="number" min="0" name="contrib_fund" id ="contrib_fund">
+</td>
+</tr>
+
+</table>
+<br>
+<table>
+<tr><td>
+ <input type="submit" onclick="contribute()" name="contrib" value="Contribute" />
+</td></tr>
+</table>
+<script type="text/javascript">
+		calendar.set("deadline")
+</script>
+</body>
+</html>

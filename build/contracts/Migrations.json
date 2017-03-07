@@ -1,0 +1,169 @@
+{
+  "contract_name": "Migrations",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "new_address",
+          "type": "address"
+        }
+      ],
+      "name": "upgrade",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "last_completed_migration",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "completed",
+          "type": "uint256"
+        }
+      ],
+      "name": "setCompleted",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "type": "constructor"
+    }
+  ],
+  "unlinked_binary": "0x606060405234610000575b60008054600160a060020a03191633600160a060020a03161790555b5b610190806100366000396000f300606060405263ffffffff60e060020a6000350416630900f0108114610045578063445df0ac146100605780638da5cb5b1461007f578063fdacd576146100a8575b610000565b346100005761005e600160a060020a03600435166100ba565b005b346100005761006d61012d565b60408051918252519081900360200190f35b346100005761008c610133565b60408051600160a060020a039092168252519081900360200190f35b346100005761005e600435610142565b005b6000805433600160a060020a03908116911614156101275781905080600160a060020a031663fdacd5766001546040518263ffffffff1660e060020a02815260040180828152602001915050600060405180830381600087803b156100005760325a03f115610000575050505b5b5b5050565b60015481565b600054600160a060020a031681565b60005433600160a060020a039081169116141561015f5760018190555b5b5b505600a165627a7a7230582004c791c456fc82afd8ae66f15d9db99615a365d2eb5b5dda2e36e6d7adacf07b0029",
+  "networks": {
+    "1488600027329": {
+      "events": {},
+      "links": {},
+      "address": "0x6e7402e58284311576a86d6d48ae2cb374bbd903",
+      "updated_at": 1488704137011
+    },
+    "1488706875676": {
+      "events": {},
+      "links": {},
+      "address": "0xa5dfaaf6566a2f5faa4dd73fd4d0b180b3b28864",
+      "updated_at": 1488707790436
+    },
+    "1488708178961": {
+      "events": {},
+      "links": {},
+      "address": "0x2c0aa542914b4f4699a6317d9bd2677a4529e0b8",
+      "updated_at": 1488708217858
+    },
+    "1488708494761": {
+      "events": {},
+      "links": {},
+      "address": "0x5653806dc0fa895a94b12879ecfbc25f175568d8",
+      "updated_at": 1488736184460
+    },
+    "1488736398827": {
+      "events": {},
+      "links": {},
+      "address": "0x5784fbf834099c00e92fa4a5ccf06ea822c07105",
+      "updated_at": 1488736935705
+    },
+    "1488738853058": {
+      "events": {},
+      "links": {},
+      "address": "0xb7f1b7d57dbbe223f5798f67165a82e88d73fa47",
+      "updated_at": 1488738863729
+    },
+    "1488764776160": {
+      "events": {},
+      "links": {},
+      "address": "0x26864fbda0ccf724edb80f49cb20439079a6bd4e",
+      "updated_at": 1488774398309
+    },
+    "1488804538375": {
+      "events": {},
+      "links": {},
+      "address": "0xea9b693e7f93fa87487a4018adb84b8e96673248",
+      "updated_at": 1488804586463
+    },
+    "1488817180836": {
+      "events": {},
+      "links": {},
+      "address": "0x26b5178322217b93b2aa4668600526fd89e72844",
+      "updated_at": 1488817191577
+    },
+    "1488821848890": {
+      "events": {},
+      "links": {},
+      "address": "0x4fdc9eb07837b35e443fc19d06435a16a9c9fdb6",
+      "updated_at": 1488830630236
+    },
+    "1488830875455": {
+      "events": {},
+      "links": {},
+      "address": "0x277c7eec608d72adcb52074b260c3525aa2ed9f7",
+      "updated_at": 1488830891051
+    },
+    "1488831830102": {
+      "events": {},
+      "links": {},
+      "address": "0x2263eb616cde09283746e739874359c044de6507",
+      "updated_at": 1488831841140
+    },
+    "1488831942135": {
+      "events": {},
+      "links": {},
+      "address": "0x91c3f8ce5702e08befdc98f815aad2ab6fdf8c3b",
+      "updated_at": 1488832097318
+    },
+    "1488862044155": {
+      "events": {},
+      "links": {},
+      "address": "0x4726b90d480c9cffb96ebdf88c18610edc639a22",
+      "updated_at": 1488872509151
+    },
+    "1488872791742": {
+      "events": {},
+      "links": {},
+      "address": "0x4a6b4aa2876febbe64d66aad8dcfd028acb7d52a",
+      "updated_at": 1488872802024
+    },
+    "1488875474630": {
+      "events": {},
+      "links": {},
+      "address": "0x0f8720e66b199fdaa9a2a2adc810396f3e4ecf23",
+      "updated_at": 1488882638146
+    },
+    "1488883765344": {
+      "events": {},
+      "links": {},
+      "address": "0x6e214785957a30d9748985830ebbc5f3ecf587f7",
+      "updated_at": 1488883778384
+    }
+  },
+  "schema_version": "0.0.5",
+  "updated_at": 1488883778384
+}
