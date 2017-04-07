@@ -50,6 +50,8 @@ var endtable ="</table>";
     for(var i =0 ;i < output.length ; i++) { 
 
           var sg = projects[i];
+
+
           var counter =0;
 
           Project.at(sg).then(function(instance) {
@@ -66,6 +68,7 @@ var endtable ="</table>";
           var name = result[0]; 
     
           tablecont = tablecont + "<td>"+name+"</td>";
+
 
            var desc = result[1];
 
@@ -86,6 +89,7 @@ var endtable ="</table>";
       tablecont = tablecont + "<td>"+remaining_amt +"</td>";
 
       var status = result[5]; 
+
       var proj_stat ;  
       if (status) {
 
