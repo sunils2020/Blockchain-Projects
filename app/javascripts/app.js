@@ -136,5 +136,6 @@ alert("Thank you for your contribution");
        instance.contribute(_proj_addr,{from:web3.eth.accounts[0],value: web3.toWei(_contrib_fund,'ether'),gas:1164443});
 
       });
+  loadProjects();
 }
 
