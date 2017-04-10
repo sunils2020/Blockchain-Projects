@@ -16,6 +16,7 @@ contract('Project', function(accounts) {
     FundingHub.deployed().then(function(instance) {
 
     instance.createProject("Testing1","This is a test project 1",10,1291373548,{from:web3.eth.accounts[5]});
+    
     return instance.getProjAddr.call();
 
     }).then (function(results){
@@ -28,7 +29,7 @@ contract('Project', function(accounts) {
 
     }).then(function(instance) {
 
-       return Project.at(instance).fund(instance,{from:web3.eth.accounts[4],value:4000000000000000000});
+       return Project.at(instance).fund(web3.eth.accounts[4],{from:web3.eth.accounts[4],value:4000000000000000000});
 
      }).then(function(result) {
 
@@ -39,8 +40,8 @@ contract('Project', function(accounts) {
         console.log("\nTransfer 4 ethers from Coinbase to Project \n");
         project_balance_after_fund_transfer = web3.eth.getBalance(sg).toString();
         coinbase_balance_after_funding = parseInt(web3.fromWei(web3.eth.getBalance(web3.eth.accounts[4]),"ether"));
-        console.log("Coinbase Balance after acepting funds: "+coinbase_balance_after_funding);
-        console.log("Project  Balance after funding: " + web3.fromWei(project_balance_after_fund_transfer,"ether"));
+        console.log("Coinbase Balance after sending funds: "+coinbase_balance_after_funding);
+        console.log("Project  Balance after accepting funds: " + web3.fromWei(project_balance_after_fund_transfer,"ether"));
         assert.equal(project_balance_before ,project_balance_after_fund_transfer,"Fund is transfered after project End date - FAIL !!!!");
 
     });
@@ -69,7 +70,7 @@ contract('Project', function(accounts) {
 
     }).then(function() {
 
-       return Project.at(sg).fund(sg,{from:web3.eth.accounts[1],value:11000000000000000000,gas:200000});
+       return Project.at(sg).fund(web3.eth.accounts[1],{from:web3.eth.accounts[1],value:11000000000000000000,gas:200000});
 
     }).then (function(result) {
 
@@ -126,9 +127,9 @@ contract('Project', function(accounts) {
 
     }).then(function(instance) {
 
-       Project.at(instance).fund(instance,{from:web3.eth.accounts[6],value:1000000000000000000});
-       Project.at(instance).fund(instance,{from:web3.eth.accounts[7],value:1000000000000000000});
-       return Project.at(instance).fund(instance,{from:web3.eth.accounts[8],value:1000000000000000000});
+       Project.at(instance).fund(web3.eth.accounts[6],{from:web3.eth.accounts[6],value:1000000000000000000});
+       Project.at(instance).fund(web3.eth.accounts[7],{from:web3.eth.accounts[7],value:1000000000000000000});
+       return Project.at(instance).fund(web3.eth.accounts[8],{from:web3.eth.accounts[8],value:1000000000000000000});
 
     }).then(function(result) {
 
@@ -152,7 +153,7 @@ contract('Project', function(accounts) {
         console.log("\nAfter 60 seconds wait - Transfer funds again - by this time project is end dated.\n");
 
         var unixtime = Math.round((new Date()).getTime() / 1000) + 60;
-        Project.at(sg).fund(sg,{from:web3.eth.accounts[6],value:1000000000000000000});
+        Project.at(sg).fund(web3.eth.accounts[6],{from:web3.eth.accounts[6],value:1000000000000000000});
         return null;
 
     },60000)).then(setTimeout(function() {
@@ -201,7 +202,7 @@ contract('Project', function(accounts) {
 
     }).then(function(instance) {
 
-       return Project.at(instance).fund(instance,{from:web3.eth.accounts[2],value:5000000000000000000});
+       return Project.at(instance).fund(web3.eth.accounts[2],{from:web3.eth.accounts[2],value:5000000000000000000});
 
      }).then(function(result) {
 
