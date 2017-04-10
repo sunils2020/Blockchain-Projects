@@ -81,7 +81,7 @@ contract Project {
         2) Target amt reached - Invoke payout() function and return 
                                 the amount to each of the sender
     ***************************************************************************/
-    function fund(r_contributor_address)  payable returns (bool) {
+    function fund(address r_contributor_address)  payable returns (bool) {
         
         uint excess_amount;
         bool isExistAddress;
