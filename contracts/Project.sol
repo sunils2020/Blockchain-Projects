@@ -81,16 +81,14 @@ contract Project {
         2) Target amt reached - Invoke payout() function and return 
                                 the amount to each of the sender
     ***************************************************************************/
-    function fund()  payable returns (bool) {
+    function fund(r_contributor_address)  payable returns (bool) {
         
         uint excess_amount;
         bool isExistAddress;
         uint previousAmount;
         uint r_contributor_amt ;
-        address r_contributor_address ;
         
         r_contributor_amt = msg.value;
-        r_contributor_address = msg.sender;
 
         contribTracker(msg.sender,r_contributor_amt);
         

@@ -100,13 +100,15 @@ function FundingHub() {
  function contribute (address projectAddress) payable returns (bool) {
 
     if(msg.value == 0) return false;
+
+    address contributor = msg.sender;
     var a = map_prj_address_to_details[projectAddress];
     trackProject ( a.name,  
                                     a.description, 
                                     a.projectOwnerAddress,
                                     a.fundingGoal, 
                                     a.deadline);
-    bool isFailure = Project(projectAddress).fund.value(msg.value)();
+    bool isFailure = Project(projectAddress).fund.value(msg.value)(contributor);
     return isFailure;
     }
 }
